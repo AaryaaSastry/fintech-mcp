@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+mcp
+pandas
+numpy
+scikit-learn
+prophet
+plotly
+httpx
+pydantic
+python-dotenv
