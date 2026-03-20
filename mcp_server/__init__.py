@@ -1,1 +1,1 @@
-# Makes mcp_server a package for direct in-process tool dispatch.
+# Makes mcp_server importable as the MCP server package.

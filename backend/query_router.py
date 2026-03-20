@@ -1,13 +1,15 @@
-import json
-import os
-import asyncio
-import re
-from typing import List, Dict, Any, Optional
 from fastapi import APIRouter, HTTPException, Query
-from .mcp_client import call_mcp_tool
-from .schemas import ChatRequest, QueryRequest
-from .mcp_orchestrator import orchestrator
-from .cross_query_handler import handle_conversation, get_welcome_message, cross_query_handler
+
+try:
+    from .mcp_client import call_mcp_tool
+    from .schemas import QueryRequest
+    from .mcp_orchestrator import orchestrator
+    from .cross_query_handler import handle_conversation, get_welcome_message
+except ImportError:
+    from mcp_client import call_mcp_tool
+    from schemas import QueryRequest
+    from mcp_orchestrator import orchestrator
+    from cross_query_handler import handle_conversation, get_welcome_message
 
 router = APIRouter()
 
